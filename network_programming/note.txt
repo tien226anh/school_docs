@@ -1,0 +1,65 @@
+Lập trình mạng
+-- Đặng Ngọc Hùng -- hungdn@ptit.edu.vn
+---------
+Mục tiêu môn học:
+--> Xây dựng/Phát triển các ứng dụng có giao tiếp qua mạng [cơ bản nâng cao] [Ngôn ngữ: Java]
+- 1) Lập trình hướng đối tượng (java)
+  2) Mạng máy tính
+  
+Nội dung: Trình bày các kỹ thuật lập trình mạng phổ biến
+    + Đa luồng
+    + Socket
+    + JDBC
+    + Phân tán
+    + Webservice
+--> Bài học:
+    1) Các khái niệm cơ bản mạng [Tổng quan]
+    2) Stream (Luồng dữ liệu)
+    3) Thread (Luồng xử lý) (JVM)
+    4) JDBC (MVC)
+    5) TCP Socket
+    6) HTTP/SMTP/FTP
+    7) UDP Socket
+    8) NIC / Multicast
+    9) RMI (Kỹ thuật lập trình phân tán thuần Java)
+    10) WebService (XML) 
+
+---> 16 tuần --- 10LT + 6 BTL + 3TH
+ 
+-----Đánh giá:
+- CC 10%:   9 - số buổi nghỉ (*1) + điểm cộng (đóng góp/phát biểu..)
+- TBKT 20%: trung bình kiểm tra thực hành phòng máy: 02 buổi
+    [Viết sẵn server] --> Chỉ yêu cầu các bạn viết Client giao tiếp với Server [trong đề bài mô tả]
+    + TH số 1: (lựa chọn) Stream
+    + TH số 2: (bắt buộc) TCP Socket [Kiểm tra 60']
+    + TH số 3: (bắt buộc) UDP Socket [Kiểm tra 60']
+    Thời gian: 12h00-16h00 --> 12h30 - 14h30 [13h30 - 14h30]
+               16h00-20h00 --> 14h30 - 17h00 [16h00 - 17h00]
+- BTL 20%: Trung bình (đánh giá theo tiến trình), làm việc nhóm (tối đa 3 người)[github]
+    + ít nhất 3 buổi đánh giá --> có tiến triển --> báo cáo buổi cuối
+- Thi cuối kì 50%: Thi trên phòng máy (như thực hành) [60' - 5 bài] [4 6 8 9 10]
+        1) TCP Socket
+        2) UDP Socket
+        3) RMI
+        4) Web service
+        5) Mix (2, 4)
+
+--- Học liệu:
+    1) Java Network Programing 4th ( gửi trên group fb file .pdf)
+
+
+--- Thảo luận/trao đổi
+    - group fb: fb.com/groups/ltmhk12024
+    
+
+    
+
+
+
+
+
+
+
+
+
+  
