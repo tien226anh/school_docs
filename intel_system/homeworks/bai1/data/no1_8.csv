@@ -1,6 +1,6 @@
- ,tienanh,vphuong,vu,nam,dphuong
-c,a,b,c,d,d
-c++,a,b,c,d,d
-python,a,b,c,d,d
-java,a,b,c,d,d
-swift,a,b,c,d,d
+Subject,tienanh,vphuong,vu,nam,dphuong
+C,6,7,8,8,9
+C++,7,8,9,10,6
+Java,8,9,7,9,7
+Python,9,8,10,10,10
+Swift,10,7,6,8,8
