@@ -1,7 +1,7 @@
 import pickle
 import numpy as np
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, JSONResponse
 from pydantic import BaseModel
 
 class Features(BaseModel):
@@ -26,21 +26,13 @@ def predict(features: Features):
   features_array = np.array([features.Glucose, features.BMI, features.Age])
   
   prediction = loaded_model.predict([features_array])
-  print(prediction[0])
-  if(prediction[0] == 1):
-    condition = "Diabetic"
-  else:
-    condition = "Not Diabetic"
   confidence = loaded_model.predict_proba([features_array])
   
-  response = {
-    "prediction": str(condition),
-    "confidence": str(round(np.amax(confidence[0]) * 100 ,2)) + "%"
-  }
-  # response['prediction'] = int(prediction[0])
-  # response['confidence'] = str(round(np.amax(confidence[0]) * 100 ,2))
+  response = {}
+  response['prediction'] = int(prediction[0])
+  response['confidence'] = str(round(np.amax(confidence[0]) * 100 ,2))
   
-  return response
+  return JSONResponse(response)
 
 if __name__ == '__main__':
   uvicorn.run(app, host="localhost", port=5000, reload=True)
