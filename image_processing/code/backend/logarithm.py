@@ -33,7 +33,7 @@ class LogarithmImage:
 
         return {"original_image": image_path, output_dir: saved_image_path}
 
-    def create_log_image(self, image_path):
+    def process_image(self, image_path):
         def log_transformation(image):
             return np.log(1 + image)
 

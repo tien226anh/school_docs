@@ -7,7 +7,7 @@ class ThresholdImage:
     def __init__(self) -> None:
         self.threshold_images = {}
 
-    def create_threshold_image(self, image_path):
+    def process_image(self, image_path):
         image_name = os.path.basename(image_path)
         save_path = "static/output_images/threshold"
         saved_image_path = os.path.join(save_path, image_name)

@@ -6,7 +6,7 @@ class NegativeImage:
     def __init__(self) -> None:
         self.negative_images = {}  # Rename the instance variable to avoid conflicts
 
-    def create_negative_image(self, image_path):
+    def process_image(self, image_path):
         # Load the image
         image_name = os.path.basename(image_path)
         print(image_name)
