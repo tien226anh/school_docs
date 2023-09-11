@@ -10,8 +10,8 @@ class LogarithmImage:
 
     def _process_image(self, image_path, transformation_func, output_dir):
         image_name = os.path.basename(image_path)
-        save_path = os.path.join("static/output_images", output_dir)
-        saved_image_path = os.path.join(save_path, image_name)
+        save_path = f"static/output_images/{output_dir}"
+        saved_image_path = f"{save_path}/{image_name}"
         original_image = cv2.imread(image_path)
 
         if not os.path.exists(save_path):
@@ -39,7 +39,7 @@ class LogarithmImage:
 
         return self._process_image(image_path, log_transformation, "logarithm")
 
-    def create_inverse_log_image(self, image_path):
+    def process__image(self, image_path):
         def inverse_log_transformation(image):
             return (np.exp(image) - 1) / (np.exp(1) - 1)
 

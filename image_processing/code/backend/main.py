@@ -11,6 +11,7 @@ image_processors = {
     "negative": NegativeImage(),
     "thresholding": ThresholdImage(),
     "logarithm": LogarithmImage(),
+    "inverse_logarithm": LogarithmImage(),
 }
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -28,10 +29,13 @@ async def index():
     return {"message": "Hello World"}
 
 
-@app.post("/{processor_name}}")
+@app.post("/process_image")
 async def process_image_endpoint(processor_name: str, file: UploadFile = File(...)):
     if processor_name in image_processors:
-        return process_image(file, image_processors[processor_name].process_image)
+        if processor_name != "inverse_logarithm":
+            return process_image(file, image_processors[processor_name].process_image)
+        else:
+            return process_image(file, image_processors[processor_name].process__image)
     else:
         return {"error": "Invalid image processor name"}
 
