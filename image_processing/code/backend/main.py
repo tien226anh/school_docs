@@ -21,7 +21,7 @@ def process_image(file, image_processor):
     file_location = f"static/images/{file.filename}"
     with open(file_location, "wb") as image:
         shutil.copyfileobj(file.file, image)
-    return image_processor(file_location)
+    return image_processor.process_image(file_location)
 
 
 @app.get("/")
@@ -33,9 +33,9 @@ async def index():
 async def process_image_endpoint(processor_name: str, file: UploadFile = File(...)):
     if processor_name in image_processors:
         if processor_name != "inverse_logarithm":
-            return process_image(file, image_processors[processor_name].process_image)
+            return process_image(file, image_processors[processor_name])
         else:
-            return process_image(file, image_processors[processor_name].process__image)
+            return process_image(file, image_processors[processor_name])
     else:
         return {"error": "Invalid image processor name"}
 

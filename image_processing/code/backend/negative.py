@@ -1,3 +1,4 @@
+# negative.py
 import cv2
 import os
 
@@ -9,7 +10,6 @@ class NegativeImage:
     def process_image(self, image_path):
         # Load the image
         image_name = os.path.basename(image_path)
-        print(image_name)
         save_path = "static/output_images/negative/"  # Replace with the path to save the negative image
         saved_image_path = os.path.join(save_path, image_name)
         original_image = cv2.imread(image_path)
