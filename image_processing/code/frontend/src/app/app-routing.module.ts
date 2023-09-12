@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CenteredContentLayoutComponent } from './layout/centered-content-layout/centered-content-layout.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterModule } from './register/register.module';
+import {ImageprocessComponent} from "@app/imageprocess/imageprocess.component";
 
 const routes: Routes = [
   {
@@ -15,7 +16,10 @@ const routes: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
-    children: [{ path: 'dashboard', component: DashboardComponent }],
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'imageprocess', component: ImageprocessComponent}
+    ],
   },
   {
     path: '',
@@ -40,6 +44,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./register/register.module').then((m) => m.RegisterModule),
   },
+  {
+    path: 'imageprocess',
+    loadChildren: () =>
+      import('./imageprocess/imageprocess.module').then((m) => m.ImageprocessModule)
+  }
 ];
 
 @NgModule({
