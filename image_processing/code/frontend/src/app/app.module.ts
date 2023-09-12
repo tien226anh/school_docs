@@ -9,6 +9,8 @@ import { LoginModule } from './login/login.module';
 import { RegisterModule } from './register/register.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { MaterialModule } from './material-module';
+import { HttpClientModule } from '@angular/common/http';
+import { ImageprocessModule } from './imageprocess/imageprocess.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MaterialModule } from './material-module';
     LoginModule,
     RegisterModule,
     DashboardModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    ImageprocessModule
   ],
   providers: [],
   bootstrap: [AppComponent]

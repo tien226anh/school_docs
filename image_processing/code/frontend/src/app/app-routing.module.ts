@@ -5,7 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CenteredContentLayoutComponent } from './layout/centered-content-layout/centered-content-layout.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterModule } from './register/register.module';
-import {ImageprocessComponent} from "@app/imageprocess/imageprocess.component";
+import { ImageprocessComponent } from './imageprocess/imageprocess.component';
 
 const routes: Routes = [
   {
@@ -43,11 +43,6 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () =>
       import('./register/register.module').then((m) => m.RegisterModule),
-  },
-  {
-    path: 'imageprocess',
-    loadChildren: () =>
-      import('./imageprocess/imageprocess.module').then((m) => m.ImageprocessModule)
   }
 ];
 
