@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-content >
+  <mat-card-content>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="formContent">
       <h2>Log In</h2>
       <mat-form-field class="formLogin">
@@ -9,8 +9,7 @@
           placeholder="pat@example.com"
           formControlName="email"
           required
-          type="email"
-        />
+          type="email" />
         <mat-error *ngIf="loginForm.get('email')?.invalid">
           {{ getEmailErrorMessage() }}
         </mat-error>
@@ -22,15 +21,12 @@
           placeholder="My Secret password"
           formControlName="password"
           required
-          type="password"
-        />
+          type="password" />
         <mat-error *ngIf="loginForm.get('password')?.invalid">
           {{ getPasswordErrorMessage() }}
         </mat-error>
       </mat-form-field>
-      <button mat-raised-button color="primary" ripple>
-        Login
-      </button>
+      <button mat-raised-button color="primary" ripple>Login</button>
     </form>
   </mat-card-content>
 </mat-card>

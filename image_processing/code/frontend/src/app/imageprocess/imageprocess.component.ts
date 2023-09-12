@@ -21,8 +21,8 @@ interface Processor {
 export class ImageprocessComponent implements OnInit {
   BASE_URL = `${environment.apiUrl}`;
   imageForm!: FormGroup;
-  originalImageURL: string = '';
-  negativeImageURL: string = '';
+  originalImageURL = '';
+  negativeImageURL = '';
   processorNames: Processor[] = [
     { name: 'negative', viewValue: 'Negative' },
     { name: 'thresholding', viewValue: 'Thresholding' },

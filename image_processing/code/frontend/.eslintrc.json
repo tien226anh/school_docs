@@ -40,7 +40,7 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended",
         "plugin:@angular-eslint/template/accessibility",
-        "plugin:prettier/recommend"
+        "plugin:prettier/recommended"
       ],
       "rules": {}
     }

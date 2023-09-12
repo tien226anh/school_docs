@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MainLayoutComponent implements OnInit{
 
   events: string [] = [];
-  opened: boolean = false;
+  opened = false;
 
   constructor() { }
 

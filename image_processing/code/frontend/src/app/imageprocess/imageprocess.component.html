@@ -4,7 +4,9 @@
       <mat-form-field>
         <mat-label>Processor Name:</mat-label>
         <mat-select formControlName="processor_name">
-          <mat-option *ngFor="let processorName of processorNames" [value]="processorName.name">
+          <mat-option
+            *ngFor="let processorName of processorNames"
+            [value]="processorName.name">
             {{processorName.viewValue}}
           </mat-option>
         </mat-select>
@@ -12,19 +14,30 @@
     </div>
     <div class="form-group" id="fileUpload">
       <label for="imageFile">Select Image:</label>
-      <input type="file" (change)="onFileChange($event)" formControlName="imageFile" id="imageFile" accept="image/*">
+      <input
+        type="file"
+        (change)="onFileChange($event)"
+        formControlName="imageFile"
+        id="imageFile"
+        accept="image/*" />
     </div>
-    <button mat-raised-button color="primary" type="submit" [disabled]="imageForm.invalid">Upload and Process</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="imageForm.invalid">
+      Upload and Process
+    </button>
   </form>
   <div class="displayImage">
     <div *ngIf="originalImageURL">
       <h2>Original Image</h2>
-      <img [src]="originalImageURL" alt="Original Image">
+      <img [src]="originalImageURL" alt="Original Image" />
     </div>
 
     <div *ngIf="negativeImageURL">
       <h2>Negative Image</h2>
-      <img [src]="negativeImageURL" alt="Negative Image">
+      <img [src]="negativeImageURL" alt="Negative Image" />
     </div>
   </div>
 </div>
