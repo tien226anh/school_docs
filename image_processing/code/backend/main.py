@@ -2,6 +2,7 @@ import shutil
 import uvicorn
 from fastapi import FastAPI, File, UploadFile
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 from logarithm import LogarithmImage
 from negative import NegativeImage
 from thresholding import ThresholdImage
@@ -13,6 +14,16 @@ image_processors = {
     "logarithm": LogarithmImage(),
     "inverse_logarithm": LogarithmImage(),
 }
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["POST", "GET"],
+    allow_headers=["*"],
+)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
