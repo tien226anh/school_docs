@@ -33,11 +33,12 @@ class ThresholdImage:
 
         return {
             "original_image": image_path,
-            "threshold_images": {
-                "binary_threshold": f"{save_path}/{image_name}_binary_threshold.jpg",
-                "binary_threshold_inverted": f"{save_path}/{image_name}_binary_threshold_inverted.jpg",
-                "truncated_threshold": f"{save_path}/{image_name}_truncated_threshold.jpg",
-                "set_to_0": f"{save_path}/{image_name}_set_to_0.jpg",
-                "set_to_0_inverted": f"{save_path}/{image_name}_set_to_0_inverted.jpg",
-            },
+            "processed_image": f"{save_path}/{image_name}_binary_threshold.jpg",
+            # "threshold_images": {
+            #     "binary_threshold": f"{save_path}/{image_name}_binary_threshold.jpg",
+            #     "binary_threshold_inverted": f"{save_path}/{image_name}_binary_threshold_inverted.jpg",
+            #     "truncated_threshold": f"{save_path}/{image_name}_truncated_threshold.jpg",
+            #     "set_to_0": f"{save_path}/{image_name}_set_to_0.jpg",
+            #     "set_to_0_inverted": f"{save_path}/{image_name}_set_to_0_inverted.jpg",
+            # },
         }

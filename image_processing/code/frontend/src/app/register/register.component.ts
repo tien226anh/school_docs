@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() {}
+  constructor() {return}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {return}
 }

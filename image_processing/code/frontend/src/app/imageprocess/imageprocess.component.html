@@ -13,21 +13,26 @@
       </mat-form-field>
     </div>
     <div class="form-group" id="fileUpload">
-      <label for="imageFile">Select Image:</label>
-      <input
-        type="file"
-        (change)="onFileChange($event)"
-        formControlName="imageFile"
-        id="imageFile"
-        accept="image/*" />
+      <mat-card class="chooseImageCard">
+        <label for="imageFile">Select Image:</label>
+        <input
+          type="file"
+          (change)="onFileChange($event)"
+          formControlName="imageFile"
+          id="imageFile"
+          class="imageFileClass"
+          accept="image/*" />
+      </mat-card>
     </div>
-    <button
-      mat-raised-button
-      color="primary"
-      type="submit"
-      [disabled]="imageForm.invalid">
-      Upload and Process
-    </button>
+    <div class="form-group">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="imageForm.invalid">
+        Upload and Process
+      </button>
+    </div>
   </form>
   <div class="displayImage">
     <div *ngIf="originalImageURL">

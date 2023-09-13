@@ -30,4 +30,4 @@ class NegativeImage:
             image_name
         ] = saved_image_path  # Store the result in the instance variable
 
-        return {"original_image": image_path, "negative_image": saved_image_path}
+        return {"original_image": image_path, "processed_image": saved_image_path}

@@ -38,7 +38,7 @@ class LogarithmImage:
         def log_transformation(image):
             return np.log(1 + image)
 
-        return self._process_image(image_path, log_transformation, "logarithm")
+        return self._process_image(image_path, log_transformation, "processed_image")
 
     def process__image(self, image_path):
         def inverse_log_transformation(image):

@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
     ]),
   });
 
-  constructor() {}
+  constructor() {return}
   getEmailErrorMessage() {
     if (this.loginForm.get('email')?.hasError('required')) {
       return 'You must enter a email';
@@ -41,5 +41,5 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {return}
 }

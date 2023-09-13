@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CenteredContentLayoutComponent implements OnInit{
 
-  constructor() { }
+  constructor() { return }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    return;
+  }
 }

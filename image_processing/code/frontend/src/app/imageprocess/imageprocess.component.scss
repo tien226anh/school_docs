@@ -1,9 +1,47 @@
 .container {
   display: flex;
+  flex-direction: column;
 
   #fileUpload {
     display: flex;
     flex-direction: column;
+  }
+
+  .chooseImageCard {
+    max-width: 60vw;
+  }
+
+  .imageFileClass::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  .imageFileClass::before {
+    content: 'Select Image';
+    color: white;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #3f51b5, #3f51b5);
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 10pt;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .imageFileClass:hover::before {
+    border-color: #3f51b5;
+  }
+
+  .imageFileClass:active {
+    outline: 0;
+  }
+
+  .imageFileClass:active::before {
+    background: -webkit-linear-gradient(top, #6279ff, #6279ff);
   }
 
   .displayImage {

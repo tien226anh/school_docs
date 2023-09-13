@@ -10,9 +10,9 @@ export class MainLayoutComponent implements OnInit{
   events: string [] = [];
   opened = false;
 
-  constructor() { }
+  constructor() { return }
 
   ngOnInit(): void {
-
+    return
   }
 }

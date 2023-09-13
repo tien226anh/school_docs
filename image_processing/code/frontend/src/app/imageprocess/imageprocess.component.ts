@@ -1,17 +1,9 @@
-import { HttpClient, HttpEventType } from '@angular/common/http';
+import { ImageProcessingResponse } from './../interface/image-processing-response';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Processor } from '@app/interface/processor';
 import { environment } from 'environments/environment.development';
-
-interface ImageProcessingResponse {
-  original_image: string;
-  negative_image: string;
-}
-
-interface Processor {
-  name: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'app-imageprocess',
@@ -51,11 +43,14 @@ export class ImageprocessComponent implements OnInit {
     const formData = new FormData();
     formData.append('file', this.imageForm.get('imageFile')?.value);
 
-    this.http.post<ImageProcessingResponse>(`${this.BASE_URL}/process_image/?processor_name=${this.imageForm.get('processor_name')?.value}`, formData).subscribe(
-      (response) => {
-        console.log('Image uploaded and processed:', response);
+    this.http.post<ImageProcessingResponse>(
+      `${this.BASE_URL}/process_image/?processor_name=${this.imageForm.get('processor_name')?.value}`,
+      formData
+      ).subscribe(
+      (response: ImageProcessingResponse) => {
+        console.log('Image uploaded and processed:', response.processed_image);
         this.originalImageURL = `${this.BASE_URL}/${response.original_image}`;
-        this.negativeImageURL = `${this.BASE_URL}/${response.negative_image}`;
+        this.negativeImageURL = `${this.BASE_URL}/${response.processed_image}`;
         // Xử lý kết quả từ API ở đây (nếu cần)
       },
       (error) => {
