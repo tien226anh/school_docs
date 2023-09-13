@@ -50,7 +50,12 @@
     flex-direction: row;
 
     img {
-      max-width: 60%;
+      max-width: 80%;
+    }
+
+    img:hover {
+      cursor: pointer;
+      transform: scale(1.5);
     }
   }
 }
